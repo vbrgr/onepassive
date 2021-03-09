@@ -16,14 +16,14 @@ export class UserService {
   public getUsersById(Id){
        return this.httpClient.get(`${this.SERVER_URL + 'user'}/${Id}`); 
   }
-  public register(userdata: {id: number, amount: number, clientId: number, userId: number, description: string}){
+  public register(userdata: {id: number, name:string, email:string, password:string}){
       return this.httpClient.post(`${this.SERVER_URL + 'user'}`, userdata)
   }
 
   public delete(Id){
       return this.httpClient.delete(`${this.SERVER_URL + 'user'}/${Id}`)
   }
-  public update(userdata: {id: number, amount: number, clientId: number, userId: number, description: string}){
+  public update(userdata: {id: number, name:string, email:string, password:string}){
       return this.httpClient.put(`${this.SERVER_URL + 'user'}/${userdata.id}`, userdata)
   }
 }

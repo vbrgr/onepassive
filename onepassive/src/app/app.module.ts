@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
-import { InMemoryWebApiModule } from “angular-in-memory-web-api”;  
 import { DataService } from “./data.service”;
 
 @NgModule({
@@ -14,8 +13,7 @@ import { DataService } from “./data.service”;
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-	InMemoryWebApiModule.forRoot(DataService)
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
